@@ -1,0 +1,376 @@
+#                          main_input
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/bottom_bar_height"
+              android:layout_alignParentBottom="true"
+              android:background="@drawable/bg_bottom_input_bar"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/ibMainClock"
+        android:layout_width="@dimen/action_bar_height"
+        android:layout_height="match_parent"
+        android:background="@color/colorTranslate"
+        android:src="@drawable/btn_clock"/>
+
+    <EditText
+        android:id="@+id/etInputContent"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/space_6dp"
+        android:layout_marginTop="@dimen/space_6dp"
+        android:layout_weight="1"
+        android:background="@drawable/schedule_input_edit_text"
+        android:ellipsize="start"
+        android:gravity="center"
+        android:hint="@string/schedule_input_you_do_thing"
+        android:lines="1"
+        android:padding="@dimen/space_6dp"
+        android:textColor="@color/color_schedule_title_text"
+        android:textColorHint="@color/color_text_grey"/>
+
+    <ImageButton
+        android:id="@+id/ibMainOk"
+        android:layout_width="@dimen/action_bar_height"
+        android:layout_height="match_parent"
+        android:background="@color/colorTranslate"
+        android:src="@drawable/btn_ok"/>
+
+</LinearLayout>
+
+
+
+
+#                                        main_menu
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_gravity="start"
+              android:layout_marginRight="@dimen/action_bar_height"
+              android:background="@color/color_menu_title_background"
+              android:clickable="true"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical"
+              android:tag="menu">
+
+    <TextView
+        android:id="@+id/tvMenuTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:paddingLeft="@dimen/space_20dp"
+        android:text="@string/app_name"
+        android:textColor="@color/colorWrite"
+        android:textSize="@dimen/text_size_20sp"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_menu_background"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llMenuSchedule"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/menu_item_height"
+                    android:background="@drawable/menu_item_border"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_20dp"
+                        android:src="@mipmap/ic_menu_schedule"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_10dp"
+                        android:layout_weight="1"
+                        android:text="@string/menu_schedule"
+                        android:textColor="@color/colorWrite"
+                        android:textSize="@dimen/text_size_18sp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/space_10dp"
+                        android:src="@mipmap/ic_menu_go"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_menu_border_with_arrow"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/menu_item_second_height"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/space_20dp"
+                            android:src="@mipmap/ic_menu_event_set"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/space_10dp"
+                            android:layout_weight="1"
+                            android:text="@string/menu_event_set"
+                            android:textColor="@color/colorWrite"
+                            android:textSize="@dimen/text_size_18sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llMenuNoCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/menu_item_second_height"
+                    android:layout_marginTop="-9dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_30dp"
+                        android:src="@mipmap/ic_menu_category"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_16dp"
+                        android:layout_weight="1"
+                        android:text="@string/menu_no_category"
+                        android:textColor="@color/menu_item_text_color"
+                        android:textSize="@dimen/text_size_16sp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/space_10dp"
+                        android:src="@mipmap/ic_menu_item_go"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:background="@color/color_menu_line"/>
+
+                <com.jeek.calendar.widget.AbsoluteRecyclerView
+                    android:id="@+id/rvMenuEventSetList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvMenuAddEventSet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/btn_add_event_set"
+                    android:drawablePadding="@dimen/space_16dp"
+                    android:paddingBottom="@dimen/space_16dp"
+                    android:paddingLeft="@dimen/space_30dp"
+                    android:paddingTop="@dimen/space_16dp"
+                    android:text="@string/menu_add_event_set"
+                    android:textColor="@color/menu_item_text_color"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
+
+
+
+
+
+
+#                                  main_title_bar
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_menu_title_background"
+    android:theme="@style/AppTheme.AppBarOverlay"
+    app:elevation="0dp">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:navigationIcon="@null"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/ivMainMenu"
+                android:layout_width="@dimen/action_bar_height"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:background="@color/colorTranslate"
+                android:src="@drawable/btn_menu"/>
+
+            <LinearLayout
+                android:id="@+id/llTitleDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tvTitleMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="九月"
+                    android:textColor="@color/colorWrite"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvTitleDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="今天"
+                    android:textColor="@color/colorWrite"
+                    android:textSize="@dimen/text_size_14sp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/action_bar_height"
+                android:layout_marginRight="@dimen/action_bar_height"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="沙盒网络"
+                android:textColor="@color/colorWrite"
+                android:textSize="@dimen/text_size_18sp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+</android.support.design.widget.AppBarLayout>
+
+
+
+#                          simple_title_bar
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay"
+    app:elevation="0dp">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:navigationIcon="@null"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/space_12dp"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textColor="@color/simple_title_bar_text_color"
+                android:textSize="@dimen/text_size_16sp"/>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/action_bar_height"
+                android:layout_marginRight="@dimen/action_bar_height"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@string/schedule_event_detail_setting"
+                android:textColor="@color/colorWrite"
+                android:textSize="@dimen/text_size_18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvFinish"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/space_12dp"
+                android:gravity="center"
+                android:text="@string/finish"
+                android:textColor="@color/simple_title_bar_text_color"
+                android:textSize="@dimen/text_size_16sp"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+</android.support.design.widget.AppBarLayout>
+
+
+
+
+
+
+
+
